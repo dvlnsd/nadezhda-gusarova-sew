@@ -3,265 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Надежда Гусарова | Портновское Искусство</title>
+    <title>Надежда Гусарова | Искусство созидания</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e5e5e5;
-            --accent-color: #c5a059; /* Золотой акцент */
-            --secondary-text: #888;
+            --bg-color: #0d0d0d;
+            --silk-color: #f4f1ee; /* Цвет дорогого шелка */
+            --accent-gold: #c5a059;
+            --text-main: #e5e5e5;
+            --text-muted: #a0a0a0;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 40px;
+        h1, h2, blockquote {
+            font-family: 'Cormorant Garamond', serif;
         }
 
-        /* Hero Section */
-        header {
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+
+        /* HERO SECTION */
+        .hero {
             height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            border-bottom: 1px solid #222;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-            line-height: 0.9;
-            margin-bottom: 20px;
+        .hero-content {
+            z-index: 2;
+            max-width: 700px;
         }
 
-        .hero-sub {
-            font-size: 1.2rem;
-            color: var(--secondary-text);
-            max-width: 600px;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        /* Services Grid */
-        .section {
-            padding: 120px 0;
-        }
-
-        .section-label {
+        .hero-label {
             font-size: 0.8rem;
             text-transform: uppercase;
-            color: var(--accent-color);
-            letter-spacing: 3px;
-            margin-bottom: 60px;
+            letter-spacing: 5px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
             display: block;
         }
 
-        .services-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 80px;
+        h1 {
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-weight: 300;
+            line-height: 0.85;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
         }
 
-        .service-item {
-            border-bottom: 1px solid #222;
-            padding-bottom: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            align-items: start;
+        .hero-story {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--text-muted);
+            line-height: 1.4;
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 25px;
+            margin-bottom: 40px;
         }
 
-        .service-title {
-            font-size: 1.8rem;
-            font-weight: 400;
+        /* SERVICES GRID */
+        .section { padding: 140px 0; }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 80px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 300;
             text-transform: uppercase;
         }
 
-        .service-content p {
-            color: var(--secondary-text);
-            font-size: 1.1rem;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .card {
+            padding: 40px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 300;
             margin-bottom: 20px;
         }
 
-        .service-tag {
-            font-size: 0.7rem;
-            border: 1px solid #444;
-            padding: 4px 10px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
         }
 
-        /* Buttons */
-        .cta {
+        /* BUTTONS */
+        .btn {
             display: inline-block;
-            padding: 18px 40px;
-            background-color: var(--text-color);
-            color: var(--bg-color);
+            padding: 20px 45px;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
             cursor: pointer;
         }
 
-        .cta:hover {
-            background-color: var(--accent-color);
+        .btn-gold {
+            background: var(--accent-gold);
             color: white;
+            font-weight: 600;
         }
 
-        .cta-outline {
-            background: transparent;
-            color: var(--text-color);
-            border: 1px solid var(--text-color);
+        .btn-gold:hover { background: #b08e4d; }
+
+        .btn-link {
+            color: var(--text-main);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--accent-gold);
+            width: fit-content;
         }
 
-        /* Manifesto */
+        /* MANIFESTO SECTION */
         .manifesto {
-            background-color: #111;
-            padding: 100px 0;
+            background: var(--silk-color);
+            color: #1a1a1a;
+            padding: 120px 0;
             text-align: center;
         }
 
         .manifesto blockquote {
-            font-size: 2.5rem;
-            font-weight: 200;
-            font-style: italic;
-            max-width: 800px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        footer {
-            padding: 60px 0;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #444;
-            border-top: 1px solid #222;
-        }
-
         @media (max-width: 768px) {
-            .service-item {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            h1 { font-size: 3.5rem; }
+            h1 { font-size: 4rem; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <span class="section-label">Haut Couture Education</span>
-            <h1>Надежда<br>Гусарова</h1>
-            <p class="hero-sub">Обучение портновскому искусству как ремеслу. Передаю знания, которые не купишь в магазине и не выучишь по учебникам — из рук в руки.</p>
-            <a href="https://t.me/portnovskyclub" class="cta">Связаться с мастером</a>
-        </header>
-
-        <section class="section">
-            <span class="section-label">Программы обучения</span>
-            <div class="services-list">
-                
-                <div class="service-item">
-                    <div class="service-title">Шитьё с нуля</div>
-                    <div class="service-content">
-                        <span class="service-tag">Фундаментальный курс</span>
-                        <p>Мы не просто шьем — мы изучаем архитектуру тела. Ваше первое изделие будет выглядеть так, будто оно создано в профессиональном ателье.</p>
-                        <a href="https://t.me/portnovskyclub" class="cta-outline cta">Записаться</a>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-title">Трикотаж</div>
-                    <div class="service-content">
-                        <span class="service-tag">Работа с формой</span>
-                        <p>Секреты работы с деликатными тканями. Как заставить трикотаж сидеть идеально, сохраняя форму и качество швов годами.</p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-title">Детская одежда</div>
-                    <div class="service-content">
-                        <span class="service-tag">Мастерская любви</span>
-                        <p>Создание безупречного гардероба для детей. Технологии кроя и швов, которые дарят комфорт и выглядят эстетично.</p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-title">Техника Мережка</div>
-                    <div class="service-content">
-                        <span class="service-tag">Эксклюзивный МК</span>
-                        <p>Редчайшее мастерство ручной вышивки. Уровень кутюрных домов для ваших личных проектов.</p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-title">Искусство</div>
-                    <div class="service-content">
-                        <span class="service-tag">Иллюстрация и Живопись</span>
-                        <p>Обучение фэшн-иллюстрации и классической живописи на пленэре. Развиваем взгляд художника и чувство цвета.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-    <section class="manifesto">
+    <section class="hero">
         <div class="container">
-            <blockquote>"Я не учу нажимать на педаль машинки. Я учу чувствовать ткань и создавать вещи, у которых есть душа."</blockquote>
+            <div class="hero-content">
+                <span class="hero-label">Art of Tailoring</span>
+                <h1>Надежда<br>Гусарова</h1>
+                <div class="hero-story">
+                    «Я начала шить раньше, чем научилась писать. Моим первым учителем была бабушка, и её уроки ремесла стоят дороже любых университетских дипломов. Сегодня я учу создавать вещи, которые невозможно повторить».
+                </div>
+                <a href="https://t.me/portnovskyclub" class="btn btn-gold">Вступить в клуб</a>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        <section class="section">
-            <span class="section-label">Консалтинг и Экспертиза</span>
-            <div class="services-list">
-                
-                <div class="service-item">
-                    <div class="service-title">Создание Бренда</div>
-                    <div class="service-content">
-                        <span class="service-tag">Индивидуально</span>
-                        <p>Консультации по созданию коллекций и выстраиванию ДНК вашего бренда. От эскиза до технической реализации.</p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-title">Тканевый Консьерж</div>
-                    <div class="service-content">
-                        <span class="service-tag">Экспертный выезд</span>
-                        <p>Совместный подбор тканей в магазинах. Обучение работе с составами, фактурами и подбор идеального материала под задачу.</p>
-                        <a href="https://t.me/portnovskyclub" class="cta">Забронировать консультацию</a>
-                    </div>
-                </div>
-
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Образование</h2>
             </div>
-        </section>
+            
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Fundamental</span>
+                        <h3>Шитьё с нуля</h3>
+                        <p>От постановки рук до первого готового изделия. Мы не учим по шаблонам — мы учим понимать конструкцию и логику ткани.</p>
+                    </div>
+                    <a href="https://t.me/portnovskyclub" class="btn-link">Узнать подробнее</a>
+                </div>
 
-        <footer>
-            <p>© 2026 Надежда Гусарова. Санкт-Петербург. Все программы индивидуальны.</p>
-        </footer>
-    </div>
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Specialized</span>
+                        <h3>Курс: Трикотаж</h3>
+                        <p>Высший пилотаж работы с эластичными тканями. Безупречная посадка, профессиональные швы и долговечность каждого стежка.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Heritage</span>
+                        <h3>Техника Мережка</h3>
+                        <p>Ручная вышивка, ставшая легендой. Мастер-класс по созданию кутюрных деталей, которые превращают вещь в шедевр.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Creativity</span>
+                        <h3>Fashion Иллюстрация</h3>
+                        <p>Научитесь переносить свои идеи на бумагу. Обучение рисованию и живописи на пленэре для развития вкуса дизайнера.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Individual</span>
+                        <h3>Детская одежда</h3>
+                        <p>Индивидуальное обучение созданию идеального гардероба для детей. Эстетика, комфорт и безупречное качество.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="manifesto">
+        <div class="container">
+            <blockquote>«Настоящее мастерство не в дипломе, а в кончиках пальцев и безупречном вкусе»</blockquote>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Консалтинг</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Expert Choice</span>
+                        <h3>Тканевый консьерж</h3>
+                        <p>Выезд в магазины и консультация по подбору материалов. Я научу вас выбирать ткани, которые «работают» на вас.</p>
+                    </div>
+                    <a href="https://t.me/portnovskyclub" class="btn btn-gold">Забронировать</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Strategic</span>
+                        <h3>Создание бренда</h3>
+                        <p>Профессиональная помощь в разработке вашей коллекции и запуске бренда. Опыт PR и производства в одном лице.</p>
+                    </div>
+                    <a href="https://t.me/portnovskyclub" class="btn-link">Обсудить проект</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.8rem;">
+        <p>© 2026 Надежда Гусарова. Санкт-Петербург. Все права защищены.</p>
+    </footer>
 
 </body>
 </html>
