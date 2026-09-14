@@ -1,290 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Надежда Гусарова | Искусство созидания</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0d0d0d;
-            --silk-color: #f4f1ee; /* Цвет дорогого шелка */
-            --accent-gold: #c5a059;
-            --text-main: #e5e5e5;
-            --text-muted: #a0a0a0;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, blockquote {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
-
-        /* HERO SECTION */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .hero-content {
-            z-index: 2;
-            max-width: 700px;
-        }
-
-        .hero-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        h1 {
-            font-size: clamp(3.5rem, 10vw, 7rem);
-            font-weight: 300;
-            line-height: 0.85;
-            margin-bottom: 30px;
-            letter-spacing: -2px;
-        }
-
-        .hero-story {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--text-muted);
-            line-height: 1.4;
-            border-left: 2px solid var(--accent-gold);
-            padding-left: 25px;
-            margin-bottom: 40px;
-        }
-
-        /* SERVICES GRID */
-        .section { padding: 140px 0; }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 80px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-        }
-
-        .card {
-            padding: 40px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-10px);
-            background: rgba(255,255,255,0.03);
-        }
-
-        .card-tag {
-            font-size: 0.7rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 30px;
-        }
-
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            padding: 20px 45px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-gold {
-            background: var(--accent-gold);
-            color: white;
-            font-weight: 600;
-        }
-
-        .btn-gold:hover { background: #b08e4d; }
-
-        .btn-link {
-            color: var(--text-main);
-            padding: 10px 0;
-            border-bottom: 1px solid var(--accent-gold);
-            width: fit-content;
-        }
-
-        /* MANIFESTO SECTION */
-        .manifesto {
-            background: var(--silk-color);
-            color: #1a1a1a;
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .manifesto blockquote {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            line-height: 1.1;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 4rem; }
-            .grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Надежда Гусарова — индивидуальное обучение шитью, живописи и fashion-иллюстрации в Санкт-Петербурге</title>
+  <meta name="description" content="Индивидуальное обучение шитью с нуля в Санкт-Петербурге у кутюрье Надежды Гусаровой. Живопись, fashion-иллюстрация, мастер-классы по домашнему текстилю, разработка лекал и консультации по тканям.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:title" content="Надежда Гусарова — кутюрье, художник, преподаватель">
+  <meta property="og:description" content="Индивидуальное обучение шитью, живописи и fashion-иллюстрации в Санкт-Петербурге. Мастер-классы, лекала для брендов и консультации по тканям.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f3f0e8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#181815;--muted:#6e6b64;--paper:#f3f0e8;--paper2:#ebe6dc;--white:#faf9f5;--line:rgba(24,24,21,.18);--max:1240px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,sans-serif;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--max));margin:0 auto}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}h1,h2,h3{font-family:Prata,serif;font-weight:400;margin:0;line-height:1.08}h1{font-size:clamp(48px,7.2vw,102px);letter-spacing:-.035em;max-width:940px}h2{font-size:clamp(34px,4.4vw,62px);letter-spacing:-.025em}h3{font-size:clamp(24px,2.3vw,34px)}p{margin:0}.rule{border-top:1px solid var(--line)}.link{display:inline-flex;align-items:center;gap:10px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:14px;font-weight:500}.link:after{content:"↗"}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border:1px solid var(--ink);background:var(--ink);color:var(--white);font-size:13px;font-weight:500;transition:.2s}.button:hover{background:transparent;color:var(--ink)}.button.light{background:transparent;color:var(--ink)}.button.light:hover{background:var(--ink);color:var(--white)}
+    header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(243,240,232,.88);backdrop-filter:blur(14px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:Prata,serif;font-size:18px;white-space:nowrap}.nav-links{display:flex;align-items:center;gap:28px;font-size:13px}.nav-links a:hover{opacity:.56}
+    .hero{padding:150px 0 72px}.hero-top{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.55fr);gap:42px;align-items:end}.hero-intro{max-width:430px;padding-bottom:10px}.hero-intro p{margin-top:18px;color:var(--muted)}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.hero-image{margin-top:56px;height:min(67vw,720px);min-height:440px;overflow:hidden;background:#d7d0c4}.hero-image img{object-position:center 47%;filter:saturate(.72) contrast(.97)}.credit{margin-top:8px;font-size:10px;color:#858078}
+    section{padding:96px 0}.section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;margin-bottom:54px}.section-copy{max-width:670px}.section-copy p{margin-top:18px;color:var(--muted)}.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.service{padding:30px 26px 34px 0;border-bottom:1px solid var(--line);min-height:260px;display:flex;flex-direction:column;justify-content:space-between}.service:nth-child(3n+2),.service:nth-child(3n+3){padding-left:26px;border-left:1px solid var(--line)}.service .small{font-size:13px;color:var(--muted);margin-top:18px;max-width:330px}
+    .atelier{background:var(--white)}.feature{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.feature-image{height:690px;overflow:hidden;background:#d9d3c9}.feature-copy{max-width:520px}.feature-copy>p{margin:24px 0 30px;color:var(--muted)}.feature-list{margin:30px 0}.feature-row{padding:18px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:165px 1fr;gap:24px;font-size:14px}.feature-row:last-child{border-bottom:1px solid var(--line)}.feature-row span{color:var(--muted)}
+    .master-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.master-card{background:var(--paper2);min-height:330px;padding:34px;display:flex;flex-direction:column;justify-content:space-between}.master-card.wide{grid-row:span 2;min-height:680px;background:#22221f;color:var(--white);position:relative;overflow:hidden;padding:0}.master-card.wide img{position:absolute;inset:0;opacity:.68;filter:saturate(.55)}.master-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.66))}.master-content{position:relative;z-index:2;padding:36px;margin-top:auto}.master-card p{max-width:430px;margin-top:16px;color:var(--muted);font-size:14px}.master-card.wide p{color:rgba(255,255,255,.74)}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.about-sticky{position:sticky;top:110px}.about-sticky p{margin-top:22px;max-width:450px;color:var(--muted)}.about-lines{border-top:1px solid var(--line)}.about-line{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:180px 1fr;gap:30px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.about-line p{font-size:17px}.consult{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.consult-card{min-height:320px;border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:space-between}.consult-card p{margin-top:16px;color:var(--muted);font-size:14px}
+    .faq{max-width:900px;margin-left:auto}details{border-top:1px solid var(--line);padding:22px 0}details:last-child{border-bottom:1px solid var(--line)}summary{list-style:none;cursor:pointer;font-family:Prata,serif;font-size:22px;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-family:Manrope,sans-serif}details[open] summary:after{content:"–"}details p{max-width:720px;color:var(--muted);padding:16px 40px 4px 0}
+    .contact{padding:108px 0;background:#20211e;color:var(--white)}.contact-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:end}.contact h2{max-width:800px}.contact p{color:rgba(255,255,255,.66);margin-top:20px;max-width:620px}.contact .button{background:var(--white);color:var(--ink);border-color:var(--white)}.contact .button:hover{background:transparent;color:var(--white)}footer{background:#20211e;color:rgba(255,255,255,.55);padding:22px 0 32px;font-size:12px}.footer-row{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.nav-links a:not(.button){display:none}.hero-top,.section-head,.feature,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-intro{max-width:560px}.services,.consult{grid-template-columns:1fr}.service,.service:nth-child(3n+2),.service:nth-child(3n+3){padding:26px 0;border-left:0}.feature-image{height:560px}.master-grid{grid-template-columns:1fr}.master-card.wide{grid-row:auto;min-height:560px}.about-sticky{position:static}}@media(max-width:600px){.wrap{width:min(calc(100% - 28px),var(--max))}header .button{display:none}.hero{padding-top:122px}.hero-image{height:72vh;min-height:430px;margin-top:42px}section{padding:72px 0}.feature-image{height:480px}.feature-row,.about-line{grid-template-columns:1fr;gap:8px}.master-card{padding:26px}.master-content{padding:26px}.contact{padding:82px 0}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Надежда Гусарова","jobTitle":"Кутюрье, художник и преподаватель портновского искусства","address":{"@type":"PostalAddress","addressLocality":"Санкт-Петербург","addressCountry":"RU"},"sameAs":["https://t.me/gusarova_nb"],"knowsAbout":["индивидуальное обучение шитью","портновское искусство","живопись","fashion-иллюстрация","разработка лекал","текстиль","индивидуальный пошив"]}</script>
 </head>
 <body>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-label">Art of Tailoring</span>
-                <h1>Надежда<br>Гусарова</h1>
-                <div class="hero-story">
-                    «Я начала шить раньше, чем научилась писать. Моим первым учителем была бабушка, и её уроки ремесла стоят дороже любых университетских дипломов. Сегодня я учу создавать вещи, которые невозможно повторить».
-                </div>
-                <a href="https://t.me/portnovskyclub" class="btn btn-gold">Вступить в клуб</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Образование</h2>
-            </div>
-            
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Fundamental</span>
-                        <h3>Шитьё с нуля</h3>
-                        <p>От постановки рук до первого готового изделия. Мы не учим по шаблонам — мы учим понимать конструкцию и логику ткани.</p>
-                    </div>
-                    <a href="https://t.me/portnovskyclub" class="btn-link">Узнать подробнее</a>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Specialized</span>
-                        <h3>Курс: Трикотаж</h3>
-                        <p>Высший пилотаж работы с эластичными тканями. Безупречная посадка, профессиональные швы и долговечность каждого стежка.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Heritage</span>
-                        <h3>Техника Мережка</h3>
-                        <p>Ручная вышивка, ставшая легендой. Мастер-класс по созданию кутюрных деталей, которые превращают вещь в шедевр.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Creativity</span>
-                        <h3>Fashion Иллюстрация</h3>
-                        <p>Научитесь переносить свои идеи на бумагу. Обучение рисованию и живописи на пленэре для развития вкуса дизайнера.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Individual</span>
-                        <h3>Детская одежда</h3>
-                        <p>Индивидуальное обучение созданию идеального гардероба для детей. Эстетика, комфорт и безупречное качество.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="manifesto">
-        <div class="container">
-            <blockquote>«Настоящее мастерство не в дипломе, а в кончиках пальцев и безупречном вкусе»</blockquote>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Консалтинг</h2>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Expert Choice</span>
-                        <h3>Тканевый консьерж</h3>
-                        <p>Выезд в магазины и консультация по подбору материалов. Я научу вас выбирать ткани, которые «работают» на вас.</p>
-                    </div>
-                    <a href="https://t.me/portnovskyclub" class="btn btn-gold">Забронировать</a>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <span class="card-tag">Strategic</span>
-                        <h3>Создание бренда</h3>
-                        <p>Профессиональная помощь в разработке вашей коллекции и запуске бренда. Опыт PR и производства в одном лице.</p>
-                    </div>
-                    <a href="https://t.me/portnovskyclub" class="btn-link">Обсудить проект</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.8rem;">
-        <p>© 2026 Надежда Гусарова. Санкт-Петербург. Все права защищены.</p>
-    </footer>
-
-</body>
-</html>
+<header><div class="wrap nav"><a class="brand" href="#top">Надежда Гусарова</a><nav class="nav-links"><a href="#education">Обучение</a><a href="#masterclasses">Мастер-классы</a><a href="#services">Услуги</a><a href="#about">О мастере</a><a class="button light" href="https://t.me/gusarova_nb" target="_blank" rel="noopener">Написать в Telegram</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div class="hero-top"><div><div class="eyebrow">Санкт-Петербург · портновское искусство · живопись</div><h1>Учиться ремеслу у мастера, который умеет делать сам.</h1></div><div class="hero-intro"><p>Надежда Гусарова — кутюрье, художник и преподаватель. Индивидуально учит шить с нуля, работать с формой и тканью, рисовать и видеть одежду как цельный визуальный образ.</p><div class="hero-actions"><a class="button" href="https://t.me/gusarova_nb" target="_blank" rel="noopener">Записаться</a><a class="button light" href="#education">Смотреть направления</a></div></div></div><div class="hero-image"><img src="https://images.unsplash.com/photo-1784630165340-0b8c24e22ad2?auto=format&fit=crop&q=86&w=2200" alt="Работа над fashion-иллюстрацией"></div><div class="credit">Временное изображение для макета · Unsplash / Nasim Keshmiri</div></div></section>
+<section id="education" class="rule"><div class="wrap"><div class="section-head"><div class="eyebrow">Индивидуальное обучение</div><div class="section-copy"><h2>Не потоковый курс, а работа один на один.</h2><p>Программа собирается под ваш уровень и задачу. Можно прийти совсем без опыта или с конкретным запросом: посадка изделия, обработка сложного узла, построение, ткань, рисунок, fashion-эскиз.</p></div></div><div class="services">
+<article class="service"><div><h3>Шитьё с нуля</h3><p class="small">База портновского ремесла для тех, кто хочет действительно понимать процесс: от ткани, мерок и конструкции до аккуратной обработки изделия.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Узнать о занятиях</a></article>
+<article class="service"><div><h3>Продвинутые задачи</h3><p class="small">Индивидуальная работа над конкретным изделием, посадкой, технологией пошива или темой, в которой не хватает уверенности.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Обсудить задачу</a></article>
+<article class="service"><div><h3>Fashion-иллюстрация</h3><p class="small">Рисунок одежды, пропорции, силуэт, материал и подача идеи. Для будущих дизайнеров, портных и тех, кому важен визуальный язык моды.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Записаться</a></article>
+<article class="service"><div><h3>Живопись</h3><p class="small">Индивидуальные занятия для развития глаза, композиции, цвета и уверенной руки. Подходит и начинающим, и тем, кто хочет вернуться к практике.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Узнать формат</a></article>
+<article class="service"><div><h3>Ткань и материал</h3><p class="small">Как видеть свойства ткани до раскроя: пластика, плотность, состав, поведение, уместность материала для конкретной формы.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Задать вопрос</a></article>
+<article class="service"><div><h3>Для будущих дизайнеров</h3><p class="small">Связать эскиз, конструкцию и реальную вещь: чтобы идея не заканчивалась на красивой картинке, а превращалась в продуманное изделие.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Обсудить обучение</a></article>
+</div></div></section>
+<section class="atelier"><div class="wrap feature"><div class="feature-image"><img src="https://images.unsplash.com/photo-1777298711618-c254c6b811d8?auto=format&fit=crop&q=84&w=1600" alt="Работа за швейной машиной" loading="lazy"></div><div class="feature-copy"><div class="eyebrow">Что отличает подход</div><h2 style="margin-top:16px">Вы учитесь не повторять шаги, а принимать профессиональные решения.</h2><p>Портновское искусство — это не набор инструкций. Хороший мастер умеет оценить ткань, увидеть пропорции, понять конструкцию и выбрать обработку до того, как возникнет проблема. Именно этому и посвящено индивидуальное обучение.</p><div class="feature-list"><div class="feature-row"><span>Формат</span><strong>Индивидуально, Санкт-Петербург</strong></div><div class="feature-row"><span>Уровень</span><strong>От полного нуля до точечных профессиональных задач</strong></div><div class="feature-row"><span>Темп</span><strong>Под человека, а не под программу группы</strong></div></div><a class="button" href="https://t.me/gusarova_nb" target="_blank">Обсудить обучение</a></div></div></section>
+<section id="masterclasses"><div class="wrap"><div class="section-head"><div class="eyebrow">Мастер-классы</div><div class="section-copy"><h2>Небольшие предметы, на которых хорошо видно качество работы.</h2><p>Готовые авторские мастер-классы по домашнему текстилю. Их можно проходить как отдельную практику или использовать как аккуратное знакомство с ремеслом.</p></div></div><div class="master-grid"><article class="master-card wide"><img src="https://images.squarespace-cdn.com/content/v1/656ec226a674b4630afee58e/ad932caf-9a3e-4081-a51b-3eac7f039999/20251022_1256_Laboratorio%2BSartoriale%2BLuminoso_simple_compose_01k85rxn0mfb5sgbfzbn1kee7s.png" alt="Светлая портновская мастерская" loading="lazy"><div class="master-overlay"></div><div class="master-content"><div class="eyebrow" style="color:rgba(255,255,255,.7)">Домашний текстиль</div><h3 style="font-size:clamp(34px,4vw,54px);margin-top:12px">Подушка в технике мережка</h3><p>Работа с тканью, точностью и декоративной техникой в предмете, который остаётся функциональным.</p></div></article><article class="master-card"><div><div class="eyebrow">Сервировка</div><h3 style="margin-top:12px">Салфетки для стола</h3><p>Аккуратная обработка, пропорции и детали, которые превращают простой текстиль в законченный предмет.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Спросить о мастер-классе</a></article><article class="master-card"><div><div class="eyebrow">Хранение</div><h3 style="margin-top:12px">Мешочки для белья и мелочей</h3><p>Практичная вещь и хороший учебный формат для освоения чистой обработки и красивой работы с текстилем.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Узнать даты</a></article></div></div></section>
+<section id="about" class="atelier"><div class="wrap about-grid"><div class="about-sticky"><div class="eyebrow">Надежда Гусарова</div><h2 style="margin-top:16px">Кутюрье, художник, преподаватель.</h2><p>На сайте мы не отделяем портновское ремесло от рисунка и визуального мышления. Это части одной практики: увидеть форму, понять материал и сделать вещь точно.</p></div><div class="about-lines"><div class="about-line"><div class="kicker">Портновское искусство</div><p>Индивидуальное обучение, работа со сложными изделиями, технология и культура исполнения.</p></div><div class="about-line"><div class="kicker">Художественная практика</div><p>Живопись и fashion-иллюстрация как способ развивать глаз, композицию, чувство цвета и пропорций.</p></div><div class="about-line"><div class="kicker">Работа на заказ</div><p>Индивидуальный пошив возможен выборочно. Надежда берёт в работу только те вещи и задачи, которые соответствуют её специализации и формату работы.</p></div><div class="about-line"><div class="kicker">Для брендов</div><p>Разработка лекал и экспертная работа с тканями: от выбора материала до оценки того, как он поведёт себя в конкретном изделии.</p></div></div></div></section>
+<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Профессиональные услуги</div><div class="section-copy"><h2>Для частных клиентов и небольших fashion-проектов.</h2><p>Если задача выходит за рамки обучения, её можно обсудить отдельно. Надежда не работает в режиме массового ателье — проекты отбираются.</p></div></div><div class="consult"><article class="consult-card"><div><h3>Индивидуальный пошив</h3><p>Редкие заказы и определённые типы изделий. Сначала — обсуждение вещи, ткани, сложности и сроков.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Обсудить изделие</a></article><article class="consult-card"><div><h3>Лекала для брендов</h3><p>Разработка конструкций и лекал для тех, кому нужна не только идея, но и технически грамотная основа изделия.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Обсудить проект</a></article><article class="consult-card"><div><h3>Консультация по тканям</h3><p>Подбор и оценка материалов под конкретную модель, задачи бренда или личный проект.</p></div><a class="link" href="https://t.me/gusarova_nb" target="_blank">Получить консультацию</a></article></div></div></section>
+<section class="rule"><div class="wrap"><div class="section-head"><div class="eyebrow">Вопросы</div><div class="section-copy"><h2>Перед первым занятием</h2></div></div><div class="faq"><details><summary>Можно прийти, если я никогда не шила?</summary><p>Да. Индивидуальный формат позволяет начать с самого начала и не подстраиваться под скорость группы. Программа строится вокруг вашего уровня и цели.</p></details><details><summary>Это курсы шитья или частные занятия?</summary><p>Основной формат — индивидуальная работа с Надеждой. Это не потоковый курс с одинаковой программой для всех.</p></details><details><summary>Можно прийти с конкретной вещью или проблемой?</summary><p>Да. Можно заранее описать задачу в Telegram: изделие, ткань, технологический узел, посадка или рисунок.</p></details><details><summary>Где проходят занятия?</summary><p>Обучение и очные форматы — в Санкт-Петербурге. Точное место и организационные детали обсуждаются при записи.</p></details><details><summary>Можно заказать пошив?</summary><p>Да, но выборочно. Надежда не берёт все заказы подряд: сначала нужно показать или описать изделие и обсудить задачу.</p></details></div></div></section>
+<section class="contact"><div class="wrap contact-grid"><div><div class="eyebrow" style="color:rgba(255,255,255,.55)">Запись и консультации</div><h2 style="margin-top:16px">Расскажите, чему хотите научиться или какую задачу нужно решить.</h2><p>Лучше сразу написать несколько слов о вашем уровне, цели и формате: обучение шитью, живопись, fashion-иллюстрация, мастер-класс, лекала, ткань или индивидуальный пошив.</p></div><div><a class="button" href="https://t.me/gusarova_nb" target="_blank" rel="noopener">Написать Надежде в Telegram</a></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 Надежда Гусарова · Санкт-Петербург</span><span>Кутюрье · преподаватель портновского искусства · художник</span></div></footer>
+</body></html>
