@@ -43,3 +43,116 @@
 .about-photo{aspect-ratio:4/5;overflow:hidden;max-width:600px}
 .about-photo img{height:100%;width:100%;object-fit:cover}
 @media(max-width:650px){.about{grid-template-columns:1fr;gap:32px}.about h2{font-size:43px}.about-subtitle{margin:19px 0 27px}.about-photo{width:100%;aspect-ratio:4/5}}
+
+
+/* 2026 editorial art direction — coherent page rhythm and image hierarchy */
+:root{--paper:#f7f5f0;--ink:#292722;--line:#d9d4ca;--sage:#e5e9df;--cream:#eee8dc}
+body{overflow-x:hidden}
+.wrap{max-width:1280px}
+.site-header{border-bottom:1px solid rgba(56,50,43,.09)}
+.hero{min-height:0;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:clamp(28px,5vw,84px);padding-block:clamp(60px,7vw,105px);align-items:center}
+.hero-art{height:auto;aspect-ratio:4/5;max-height:590px;margin:0;overflow:hidden}
+.hero-art img{width:100%;height:100%;object-fit:contain}
+.hero h1{font-size:clamp(38px,4vw,59px);max-width:600px;line-height:1.06}
+.hero-copy{max-width:570px}
+.hero .intro{font-size:clamp(23px,2.5vw,31px);line-height:1.22;max-width:470px;margin-top:33px}
+.hero-description{font-size:21px;max-width:440px;margin-top:24px}
+.hero-copy>.text-link{margin-top:36px}
+.section{min-height:0;padding-block:clamp(74px,8vw,120px)}
+h2{font-size:clamp(46px,5.3vw,75px);line-height:1.01}
+.about{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center;gap:clamp(34px,6vw,100px)}
+.about-copy{max-width:530px}
+.about h2{font-size:clamp(45px,5vw,70px);white-space:normal}
+.about-subtitle{font-size:clamp(24px,2.45vw,31px);margin-top:24px;margin-bottom:34px}
+.about-copy>p:not(.about-subtitle)+p{margin-top:22px}
+.about-editorial{display:grid;grid-template-columns:1.38fr .85fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:15px;max-height:620px;aspect-ratio:1.15}
+.about-editorial figure{min-height:0;min-width:0;overflow:hidden;background:var(--cream)}
+.about-editorial img{width:100%;height:100%;object-fit:cover;display:block}
+.about-main-photo{grid-column:1;grid-row:1/3}
+.about-main-photo img{object-position:52% 48%}
+.about-detail-photo{grid-column:2;grid-row:1}
+.about-detail-photo img{object-position:50% 40%}
+.about-secondary-photo{grid-column:2;grid-row:2}
+.about-secondary-photo img{object-position:50% 37%}
+.learn{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);column-gap:clamp(36px,6vw,92px);row-gap:68px;align-items:center}
+.learn-copy{max-width:555px}
+.learn-photo{height:auto;aspect-ratio:4/5;max-height:680px;overflow:hidden;background:var(--cream)}
+.learn-photo img{object-fit:cover;object-position:center}
+.learning-options{gap:0;padding-top:35px;border-top:1px solid var(--line)}
+.learning-options article{border-left:0;padding:0 24px}
+.learning-options article:first-child{padding-left:0}
+.learning-options h3{border-bottom:0;margin-bottom:10px;padding-bottom:0;font-size:27px}
+.learning-options p{font-size:19px}
+.portfolio{background:var(--sage);max-width:none;width:100%;padding-inline:max(56px,calc((100vw - 1280px)/2))}
+.portfolio .section-heading{max-width:1280px;margin-inline:auto;align-items:end}
+.portfolio .section-note{max-width:330px;font-size:21px;margin-bottom:6px}
+.student-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:145px;gap:18px;margin:56px auto 0;max-width:1280px;align-items:stretch}
+.student-gallery .gallery-item,.student-gallery .gallery-item:nth-child(n+5){height:auto;min-height:0;position:relative;display:block;background:#f6f4ef;padding:10px;overflow:hidden}
+.student-gallery .gallery-item img{object-fit:contain;width:100%;height:100%}
+.student-gallery .gallery-item:nth-child(1){grid-column:span 5;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(2){grid-column:span 4;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(3){grid-column:span 3;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(4){grid-column:span 3;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(5){grid-column:span 3;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(6){grid-column:span 3;grid-row:span 3}
+.student-gallery .gallery-item:nth-child(7){grid-column:span 3;grid-row:span 3}
+.student-gallery .gallery-item:hover img{transform:scale(1.025)}
+.student-gallery .gallery-item img{transition:transform .35s ease}
+.reviews-grid{gap:22px;margin-top:52px}
+.review{background:var(--cream);padding:clamp(24px,3vw,42px);display:flex;flex-direction:column;justify-content:space-between;min-height:240px}
+.review blockquote{font-size:clamp(19px,2vw,24px);line-height:1.45}
+.review figcaption{margin-top:22px}
+.master-grid{gap:24px}
+.master-card{background:#fffdf9;border:0;padding:12px 12px 26px}
+.master-card>img{height:330px}
+.card-body{padding:23px 10px 0}
+.card-meta{border:0;max-width:100%}
+.contact{padding-block:110px;text-align:center}
+.contact>p:not(.eyebrow){margin-inline:auto}
+.footer{padding-block:32px}
+@media(max-width:1050px){.student-gallery{grid-auto-rows:110px;gap:12px}.portfolio{padding-inline:36px}.about{gap:36px}.about-editorial{max-height:540px}.learn{column-gap:38px}}
+@media(max-width:950px){.hero{column-gap:26px}.hero-art{height:auto}.about-editorial{aspect-ratio:1/1.16}.learn-photo{max-height:none}.student-gallery{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:135px}.student-gallery .gallery-item:nth-child(n){grid-column:span 3;grid-row:span 2}.student-gallery .gallery-item:first-child{grid-column:span 3;grid-row:span 3}.student-gallery .gallery-item:nth-child(7){grid-column:span 6;grid-row:span 2}}
+@media(max-width:650px){
+.wrap{width:calc(100% - 40px)}
+.hero{display:grid;grid-template-columns:1fr;gap:24px;padding-top:45px;padding-bottom:64px}
+.hero-copy{display:flex;flex-direction:column;grid-row:1}
+.hero h1{font-size:clamp(38px,10vw,55px);grid-column:auto;grid-row:auto;line-height:1.04}
+.hero .intro{font-size:25px;grid-column:auto;grid-row:auto;margin-top:24px}
+.hero-description{grid-column:auto;grid-row:auto;font-size:19px;margin-top:18px}
+.hero-copy>.text-link{grid-column:auto;grid-row:auto;margin-top:26px}
+.hero-art{grid-column:1;grid-row:2;height:auto;aspect-ratio:1/1;max-height:360px;margin:0}
+.section{padding-block:70px}
+h2,.about h2{font-size:clamp(43px,11vw,57px)}
+.about{grid-template-columns:1fr;gap:35px}
+.about-copy{max-width:none}
+.about-editorial{grid-template-columns:1.35fr .8fr;grid-template-rows:repeat(2,minmax(0,1fr));aspect-ratio:1.13;gap:9px;max-height:none}
+.about-main-photo{grid-column:1;grid-row:1/3}
+.about-detail-photo{grid-column:2;grid-row:1}
+.about-secondary-photo{grid-column:2;grid-row:2}
+.about-subtitle{font-size:25px;margin-top:20px;margin-bottom:26px}
+.learn{grid-template-columns:1fr;row-gap:32px}
+.learn-copy{max-width:none}
+.learn-photo{grid-row:2;aspect-ratio:4/4.5;height:auto;max-height:none}
+.learning-options{grid-row:3;grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 16px;margin-top:6px}
+.learning-options article{padding:0;border:0}
+.learning-options h3{font-size:23px}
+.learning-options p{font-size:18px}
+.portfolio{padding-inline:20px}
+.portfolio .section-heading{display:block}
+.portfolio .section-note{max-width:100%;margin-top:20px}
+.student-gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px;gap:10px;margin-top:32px}
+.student-gallery .gallery-item:nth-child(n){grid-column:span 1;grid-row:span 1;height:auto;padding:6px}
+.student-gallery .gallery-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+.student-gallery .gallery-item:nth-child(4){grid-column:span 2;grid-row:span 2}
+.student-gallery .gallery-item:nth-child(7){grid-column:span 2;grid-row:span 2}
+.reviews-grid{grid-template-columns:1fr;gap:14px}
+.review{min-height:0;padding:26px}
+.master-grid{grid-template-columns:1fr;gap:22px}
+.master-card{display:grid;grid-template-columns:42% 1fr;gap:15px}
+.master-card>img{height:100%;min-height:240px}
+.card-body{padding:10px 6px 10px 0}
+.contact{text-align:left;padding-block:75px}
+.contact>p:not(.eyebrow){margin-inline:0}
+}
+@media(max-width:370px){.student-gallery{grid-auto-rows:160px}.hero h1{font-size:38px}.hero-art{aspect-ratio:1/1}}
+@media(prefers-reduced-motion:reduce){.student-gallery .gallery-item img{transition:none}}
