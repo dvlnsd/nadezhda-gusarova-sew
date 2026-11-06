@@ -1,4 +1,16 @@
 'use strict';
+
+// Opening the home page starts at the top; explicit section links keep their anchors.
+// Some browsers otherwise restore an old scroll position on reload or Back.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('pageshow', () => {
+  if (window.location.hash) return;
+  const root = document.documentElement;
+  const previous = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, 0);
+  root.style.scrollBehavior = previous;
+});
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 const lightbox = document.querySelector('.lightbox');
