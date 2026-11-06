@@ -156,3 +156,56 @@ h2,.about h2{font-size:clamp(43px,11vw,57px)}
 }
 @media(max-width:370px){.student-gallery{grid-auto-rows:160px}.hero h1{font-size:38px}.hero-art{aspect-ratio:1/1}}
 @media(prefers-reduced-motion:reduce){.student-gallery .gallery-item img{transition:none}}
+
+
+/* November 2026 refinement: equal gallery image frames, consistent portrait triptych and transparent package pricing. */
+.about-editorial{width:100%;height:clamp(410px,44vw,600px);max-height:none;aspect-ratio:auto;grid-template-rows:repeat(2,minmax(0,1fr));align-self:center}
+.about-editorial figure{height:100%;min-height:0;overflow:hidden}
+.about-editorial img{display:block;width:100%;height:100%;object-fit:cover}
+.about-main-photo img{object-position:50% 42%}
+.about-detail-photo img{object-position:50% 42%}
+.about-secondary-photo img{object-position:50% 27%}
+.portfolio .student-gallery{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px;margin-top:54px}
+.portfolio .student-gallery .gallery-item,
+.portfolio .student-gallery .gallery-item:nth-child(n){display:block;flex:0 0 calc((100% - 54px)/4);width:calc((100% - 54px)/4);height:clamp(260px,29vw,360px);min-width:0;min-height:0;grid-column:auto;grid-row:auto;margin:0;padding:0;overflow:hidden;background:#f6f4ef}
+.portfolio .student-gallery .gallery-item img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform .35s ease}
+.portfolio .student-gallery .gallery-item:nth-child(1) img{object-position:50% 40%}
+.portfolio .student-gallery .gallery-item:nth-child(2) img{object-position:50% 30%}
+.portfolio .student-gallery .gallery-item:nth-child(3) img{object-position:50% 32%}
+.portfolio .student-gallery .gallery-item:nth-child(4) img{object-position:50% 38%}
+.portfolio .student-gallery .gallery-item:nth-child(5) img{object-position:50% 40%}
+.portfolio .student-gallery .gallery-item:nth-child(6) img{object-position:50% 28%}
+.portfolio .student-gallery .gallery-item:nth-child(7) img{object-position:50% 35%}
+.lesson-packages{grid-column:1/-1;width:100%;padding:34px 0 0;margin-top:0;border-top:1px solid var(--line)}
+.packages-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:28px}
+.packages-heading h3{font:400 clamp(35px,3.5vw,47px)/1.02 var(--serif);letter-spacing:-.025em}
+.packages-heading p{font:17px/1.5 var(--serif);max-width:420px;color:var(--muted)}
+.packages-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.package-card{background:#eeece5;display:flex;flex-direction:column;min-width:0;padding:27px 28px 29px;min-height:230px}
+.package-card h4{font:400 clamp(27px,2.8vw,36px)/1.1 var(--serif);margin:0}
+.package-total{font:400 clamp(33px,3.2vw,42px)/1.1 var(--serif);margin-top:25px;white-space:nowrap;letter-spacing:-.025em}
+.package-bonus{font:500 13px/1.5 var(--sans);color:var(--ink);margin-top:18px}
+.package-included{font:14px/1.4 var(--sans);margin-top:5px;color:var(--muted)}
+.learn{row-gap:58px}
+.learn .learning-options{margin-top:4px}
+@media(max-width:1050px){
+.portfolio .student-gallery{gap:14px}
+.portfolio .student-gallery .gallery-item,.portfolio .student-gallery .gallery-item:nth-child(n){flex-basis:calc((100% - 28px)/3);width:calc((100% - 28px)/3);height:320px}
+.packages-grid{gap:12px}.package-card{padding:23px 20px;min-height:220px}
+}
+@media(max-width:650px){
+.about-editorial{height:auto;aspect-ratio:1.03;gap:9px}
+.portfolio .student-gallery{gap:10px;margin-top:30px}
+.portfolio .student-gallery .gallery-item,.portfolio .student-gallery .gallery-item:nth-child(n){flex:0 0 calc((100% - 10px)/2);width:calc((100% - 10px)/2);height:clamp(220px,62vw,310px)}
+.packages-heading{display:block;margin-bottom:20px}
+.packages-heading h3{font-size:38px}
+.packages-heading p{margin-top:12px;font-size:18px}
+.lesson-packages{grid-row:3;padding-top:30px}
+.packages-grid{grid-template-columns:1fr;gap:10px}
+.package-card{min-height:0;padding:24px 25px}
+.package-card h4{font-size:31px}
+.package-total{font-size:37px;margin-top:14px}
+.package-bonus{margin-top:17px}
+.learn .learning-options{grid-row:4;margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.portfolio .student-gallery .gallery-item img{transition:none}}
