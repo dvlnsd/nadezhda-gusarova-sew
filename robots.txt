@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dvlnsd.github.io/nadezhda-gusarova-sew/sitemap.xml
