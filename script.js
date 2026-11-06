@@ -1,16 +1,29 @@
 'use strict';
 
-// Opening the home page starts at the top; explicit section links keep their anchors.
-// Some browsers otherwise restore an old scroll position on reload or Back.
+// Start at the hero on fresh page loads, including links with an old section hash.
+// In-page navigation remains native after initialization.
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-window.addEventListener('pageshow', () => {
-  if (window.location.hash) return;
+let openingScrollPending = true;
+if (location.hash) {
+  history.replaceState(history.state, '', location.pathname + location.search);
+}
+function showPageFromTop() {
+  if (!openingScrollPending) return;
   const root = document.documentElement;
   const previous = root.style.scrollBehavior;
   root.style.scrollBehavior = 'auto';
   window.scrollTo(0, 0);
   root.style.scrollBehavior = previous;
-});
+}
+showPageFromTop();
+window.addEventListener('load', () => {
+  showPageFromTop();
+  openingScrollPending = false;
+}, { once: true });
+document.addEventListener('click', event => {
+  if (event.target.closest('a[href^="#"]')) openingScrollPending = false;
+}, { capture: true });
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 const lightbox = document.querySelector('.lightbox');
